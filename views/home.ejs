@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% console.log(result) %> 
+
+    <h1>home</h1>
+    <% for(let res of result){ %> 
+        <p><%= res.email %> - <strong><%= res.created_at %> </strong></p>
+        <!-- <h3><%= res.month %> <%= res.total %> </h3> -->
+        <% } %> 
+</body>
+</html>
