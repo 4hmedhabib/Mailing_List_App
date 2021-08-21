@@ -29,6 +29,19 @@ app.get('/', (req, res) => {
 	});
 });
 
+app.post('/register', (req, res) => {
+	const person = {
+		email: req.body.email
+	};
+
+	const insertUser = 'INSERT INTO users SET ?';
+
+	connection.query(insertUser, person, (err, result) => {
+		if (err) throw err.sqlMessage;
+		res.redirect('/');
+	});
+});
+
 app.listen(5000, () => {
 	console.log('SERVER RUNNING PORT 5000');
 });
